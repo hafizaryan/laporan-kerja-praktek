@@ -1,16 +1,35 @@
-# SITARIS - Sistem Informasi Inventaris
+# Laporan Kerja Praktek - SITARIS (Sistem Informasi Inventaris)
 
-Ini adalah repositori untuk proyek mini SITARIS, yang dibuat dalam konteks mata kuliah Semester 5. Laporan kerja praktek dalam format LaTeX juga dapat ditemukan dalam repositori ini.
-
-## Deskripsi Proyek
-
-Proyek SITARIS adalah sistem informasi inventaris yang dibangun untuk mengelola inventaris perusahaan atau organisasi. Ini mencakup fitur-fitur seperti pencatatan barang, pengecekan stok, laporan inventaris, dll.
+Repositori ini berisi dokumen LaTeX laporan kerja praktek untuk proyek mini SITARIS, yaitu sistem informasi inventaris untuk pencatatan barang, pengecekan stok, dan pembuatan laporan inventaris bagi perusahaan atau organisasi. Laporan ini disusun dalam konteks mata kuliah semester 5 menggunakan template LaTeX laporan kerja praktek Program Studi Sistem Informasi UIN Sultan Syarif Kasim Riau.
 
 ## Struktur Repositori
 
-- `laporan-kerja-praktek/` - Direktori berisi file LaTeX untuk laporan kerja praktek.
+- `kerjapraktek.tex` - berkas utama yang menggabungkan seluruh komponen laporan
+- `halamandepan/` - lembar pengesahan, kata pengantar, abstrak bahasa Indonesia, dan abstract bahasa Inggris
+- `konten/` - isi laporan per bab
+- `halamanbelakang/` - bagian penutup laporan
+- `konfigurasi/` - pengaturan global dan data kerja praktek
+- `kontrol/` - berkas kontrol template dan format dokumen
+- `kerjapraktek.pdf` - hasil kompilasi akhir laporan yang ikut tersimpan di repositori
 
-## Panduan Pengguna
+Berkas berakhiran `.aux`, `.bbl`, `.blg`, `.log`, `.toc`, `.lof`, `.lot`, `.out`, `.fls`, `.fdb_latexmk`, dan `.synctex.gz` adalah berkas antara yang dihasilkan selama proses kompilasi.
 
-Jika Anda ingin membaca laporan kerja praktek saya, dapat dilakukan dengan melihat file kerjapraktek.pdf pada repository ini.
+## Prasyarat
 
+- Distribusi LaTeX, misalnya TeX Live, MiKTeX, atau MacTeX
+- Editor LaTeX seperti TeXstudio atau Texmaker
+
+## Cara Kompilasi
+
+1. Clone repositori ini.
+2. Kompilasi berkas utama:
+
+   ```bash
+   pdflatex kerjapraktek.tex
+   bibtex kerjapraktek
+   pdflatex kerjapraktek.tex
+   pdflatex kerjapraktek.tex
+   ```
+
+   Alternatifnya gunakan `latexmk -pdf kerjapraktek.tex`.
+3. Hasil akhir berupa berkas `kerjapraktek.pdf`. Untuk membaca laporannya saja, cukup buka berkas PDF tersebut tanpa perlu kompilasi.
